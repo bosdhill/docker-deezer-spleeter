@@ -5,7 +5,7 @@ To run dockerized [Deezer Spleeter](https://github.com/deezer/spleeter/wiki/2.-G
 
 ### 1. Clone this repository
 ```bash
-git clone https://github.com/xserrat/docker-deezer-spleeter.git spleeter
+git clone https://github.com/bosdhill/docker-deezer-spleeter.git spleeter
 ```
 
 ### 2. Split a music track
