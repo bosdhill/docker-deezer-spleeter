@@ -2,7 +2,7 @@ SHELL = /bin/sh
 current-dir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 .PHONY:
-run: build ## Pull & Run spleeter with 2, 4, or 5 stems
+run: pull ## Pull & Run spleeter with 2, 4, or 5 stems
 	docker run \
 		-v $(current-dir)input/:/input \
 		-v $(current-dir)output/:/output \
@@ -12,5 +12,5 @@ run: build ## Pull & Run spleeter with 2, 4, or 5 stems
 		separate -o /output -p spleeter:$(stems)stems -i /input/$(track)
 
 .PHONY:
-build: 
+pull: 
 	docker pull researchdeezer/spleeter:latest
