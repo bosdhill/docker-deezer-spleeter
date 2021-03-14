@@ -13,4 +13,4 @@ run: pull ## Pull & Run spleeter with 2, 4, or 5 stems
 
 .PHONY:
 pull: 
-	docker pull researchdeezer/spleeter:latest
+	docker pull researchdeezer/spleeter:3.7-gpu
