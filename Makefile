@@ -6,11 +6,9 @@ run: pull ## Pull & Run spleeter with 2, 4, or 5 stems
 	docker run \
 		-v $(current-dir)input/:/input \
 		-v $(current-dir)output/:/output \
-		-v $(current-dir)model/:/model \
-		-e MODEL_PATH=/model \
-		researchdeezer/spleeter:3.7-gpu \
-		separate -o /output -p spleeter:$(stems)stems -i /input/$(track)
+		deezer/spleeter:3.6-5stems \
+		separate -o /output -p spleeter:$(stems)stems /input/$(track)
 
 .PHONY:
-pull: 
-	docker pull researchdeezer/spleeter:3.7-gpu
+pull:
+	docker pull deezer/spleeter:3.6-5stems
